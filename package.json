@@ -1,0 +1,13 @@
+{
+  "name": "tampadev-signin-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Demo SPA using Sign in with Tampa.dev",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public --project-name=tampadev-signin-demo"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
+  }
+}

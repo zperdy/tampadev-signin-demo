@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tampa.dev Demo App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Login View -->
+  <div id="view-login" class="view">
+    <div class="login-card">
+      <h1>Tampa.dev Demo</h1>
+      <p>Sign in with your Tampa.dev account to see your community profile, achievements, and portfolio.</p>
+      <a id="btn-signin" class="signin-btn" href="#">
+        <img
+          src="https://api.tampa.dev/assets/signin-button.svg"
+          alt="Sign in with Tampa.dev"
+          height="44"
+        />
+      </a>
+      <div id="register-status" class="status-text"></div>
+      <a class="source-link" href="https://github.com/TampaDevs/tampadev-signin-demo" target="_blank" rel="noopener noreferrer">View source on GitHub</a>
+    </div>
+  </div>
+
+  <!-- Loading View -->
+  <div id="view-loading" class="view hidden">
+    <div class="loading-card">
+      <div class="spinner"></div>
+      <p>Signing you in...</p>
+    </div>
+  </div>
+
+  <!-- Dashboard View -->
+  <div id="view-dashboard" class="view hidden">
+    <header class="dashboard-header">
+      <h1><span class="header-dot"></span>Tampa.dev Demo</h1>
+      <button id="btn-logout" class="logout-btn">Sign Out</button>
+    </header>
+
+    <main class="dashboard-main">
+      <!-- Profile Card -->
+      <section class="card profile-card">
+        <div class="profile-header">
+          <img id="profile-avatar" class="avatar" src="" alt="Avatar" />
+          <div class="profile-info">
+            <h2 id="profile-name"></h2>
+            <p id="profile-username" class="username"></p>
+            <p id="profile-email" class="email"></p>
+          </div>
+        </div>
+        <p id="profile-bio" class="bio"></p>
+        <div id="profile-meta" class="profile-meta">
+          <span id="profile-location" class="meta-item"></span>
+          <span id="profile-joined" class="meta-item"></span>
+        </div>
+        <div id="profile-socials" class="social-links"></div>
+      </section>
+
+      <!-- Badges Card -->
+      <section class="card">
+        <h3>Badges</h3>
+        <div id="badges-list" class="badges-list">
+          <p class="placeholder">Loading badges...</p>
+        </div>
+      </section>
+
+      <!-- Achievements Card -->
+      <section class="card">
+        <h3>Achievements</h3>
+        <div id="achievements-list" class="achievements-list">
+          <p class="placeholder">Loading achievements...</p>
+        </div>
+      </section>
+
+      <!-- Portfolio Card -->
+      <section class="card">
+        <h3>Portfolio</h3>
+        <div id="portfolio-list" class="portfolio-list">
+          <p class="placeholder">Loading portfolio...</p>
+        </div>
+      </section>
+
+      <!-- Linked Accounts Card -->
+      <section class="card">
+        <h3>Linked Accounts</h3>
+        <div id="linked-accounts-list" class="linked-accounts-list">
+          <p class="placeholder">Loading linked accounts...</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Error Toast -->
+  <div id="error-toast" class="error-toast hidden"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
