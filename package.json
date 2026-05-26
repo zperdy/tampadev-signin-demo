@@ -9,5 +9,12 @@
   },
   "devDependencies": {
     "wrangler": "^3"
+  },
+  "overrides": {
+    "wrangler": {
+      "@esbuild-plugins/node-globals-polyfill": {
+        "esbuild": "0.28.0"
+      }
+    }
   }
 }
